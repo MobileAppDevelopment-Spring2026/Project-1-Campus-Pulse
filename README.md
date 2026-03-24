@@ -31,7 +31,7 @@ Welcome to my Campus Pulse project repository! This project aims to develop a mo
 
 ## License
 
-This project is licensed under the [LICENSE]().
+This project is licensed under the [LICENSE](https://github.com/MobileAppDevelopment-Spring2026/Project-1-Campus-Pulse/blob/main/LICENSE).
 
 ## Contact
 
