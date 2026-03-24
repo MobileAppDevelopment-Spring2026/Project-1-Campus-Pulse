@@ -5,7 +5,12 @@ class Budget {
   DateTime startDate;
   DateTime endDate;
 
-  Budget({this.id, required this.category, required this.amount, required this.startDate, required this.endDate});
+  Budget(
+      {this.id,
+      required this.category,
+      required this.amount,
+      required this.startDate,
+      required this.endDate});
 
   Map<String, dynamic> toMap() {
     return {

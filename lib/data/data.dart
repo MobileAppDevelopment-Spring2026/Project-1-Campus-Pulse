@@ -173,9 +173,3 @@ class CampusEventSeedData {
     ];
   }
 }
-
-
-
-Clean codebase
-    Added hard value
-Change name of the all the files
