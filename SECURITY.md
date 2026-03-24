@@ -24,4 +24,3 @@ To maintain the security of the project, we have implemented the following measu
 - Periodic security audits and assessments.
 
 Thank you for helping to keep my project safe and secure!
-

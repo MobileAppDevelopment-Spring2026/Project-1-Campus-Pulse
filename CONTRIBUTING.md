@@ -36,4 +36,3 @@ If you have any questions or need further assistance, feel free to reach out to 
 By contributing to Campus Pulse project, you agree that your contributions will be licensed under the Apache License. See the [LICENSE](https://github.com/MobileAppDevelopment-Spring2026/Project-1-Campus-Pulse/blob/main/LICENSE) file for more details.
 
 Thank you for your interest in contributing to Campus Pulse project! We appreciate your help in making this project better for everyone.
-
