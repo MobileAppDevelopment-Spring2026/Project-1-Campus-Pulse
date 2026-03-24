@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to my Campus Pulse project repository! This project aims to 
+Welcome to my Campus Pulse project repository! This project aims to develop a mobile application that helps students discover campus events, collaborate with classmates, and participate in social activities. Campus Pulse will serve as a central platform where students can easily find events that match their interests, academic goals, or career paths.
 
 ## Group Member:
 
