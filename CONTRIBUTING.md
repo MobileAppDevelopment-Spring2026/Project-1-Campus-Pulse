@@ -25,7 +25,7 @@ Before submitting a PR, please ensure that your code adheres to the following gu
 
 ## Reporting Bugs
 
-If you encounter any bugs or issues while using Personal Finance Manager, please report them by [creating an issue]() on GitHub. Make sure to include as much detail as possible, including steps to reproduce the issue.
+If you encounter any bugs or issues while using Personal Finance Manager, please report them by [creating an issue](https://github.com/MobileAppDevelopment-Spring2026/Project-1-Campus-Pulse/issues) on GitHub. Make sure to include as much detail as possible, including steps to reproduce the issue.
 
 ## Contact
 
