@@ -77,10 +77,8 @@ class ExpenseEntryController {
     await dbHelper.insertExpense(expense);
     await getExpenses();
 
-    // Clear the text fields after saving
     amountController.clear();
     notesController.clear();
-    // Reset selected category
     selectedCategory = 'Arts & Culture';
 
     ScaffoldMessenger.of(context).showSnackBar(

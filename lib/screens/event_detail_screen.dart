@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ExpenseDetailScreen extends StatefulWidget {
   final Expense expense;
-  final VoidCallback updateExpenses; // Accept the callback function
+  final VoidCallback updateExpenses;
   final bool canRemoveEvent;
 
   const ExpenseDetailScreen(

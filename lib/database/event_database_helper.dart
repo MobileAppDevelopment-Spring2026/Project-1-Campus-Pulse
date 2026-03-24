@@ -303,12 +303,10 @@ class ExpenseDatabaseHelper {
         'SELECT SUM($colAmount) AS total FROM $expenseTable WHERE $colCategory = ? AND $colDate BETWEEN ? AND ?',
         [category, startDate, endDate]);
 
-    // If there are no expenses for the given category, return 0.0
     if (result.first['total'] == null) {
       return 0.0;
     }
 
-    // Parse the total amount from the result and return it
     return result.first['total'] as double;
   }
 }

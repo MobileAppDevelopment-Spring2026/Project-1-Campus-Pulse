@@ -61,7 +61,6 @@ class BudgetSetupController {
 
     await dbBudgetHelper.insertBudget(budget);
 
-    // Check if the total amount spent for the selected category exceeds the budget amount
     bool exceedsBudget = await _checkBudgetExceeded(
         selectedCategory, amount, startDate, endDate);
 
@@ -71,9 +70,7 @@ class BudgetSetupController {
       DialogWidgets.showNotExceedDialog(context, selectedCategory);
     }
 
-    // Clear the text fields after saving
     amountController.clear();
-    // Reset selected category
     selectedCategory = 'Community Outreach';
   }
 
