@@ -1,16 +1,42 @@
-# campus_pulse
+# Campus Pulse
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+Welcome to my Campus Pulse project repository! This project aims to 
 
-This project is a starting point for a Flutter application.
+## Group Member:
 
-A few resources to get you started if this is your first Flutter project:
+- Sophie Nguyen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter**: Dart-based framework for building cross-platform mobile applications.
+- **SQLite**: Local database for data storage on mobile devices.
+- **Flutter Charts**: Library for integrating visual charts into Flutter apps.
+- **Git**: Version control system for collaboration and code management.
+- **Code Editors and IDEs**: Visual Studio Code, Android Studio, Xcode, etc.
+
+## Project Details
+
+- [**Proposal**]()
+- [**APK File**]()
+- [**Slides**]()
+- [**Demo**]()
+
+## Key Features
+
+- ****: 
+- ****: 
+- ****: 
+
+## License
+
+This project is licensed under the [LICENSE]().
+
+## Contact
+
+For any inquiries or suggestions regarding the Campus Pulse project, please contact:
+
+- Sophie Nguyen: [sophienguyen113@gmail.com](mailto:sophienguyen113@gmail.com)
+
+Thank you for your interest in my project! We look forward to your contributions and feedback. Happy coding! 🚀
