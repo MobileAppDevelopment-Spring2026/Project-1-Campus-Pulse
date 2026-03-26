@@ -110,12 +110,23 @@ class ExpenseDatabaseHelper {
     }
   }
 
+  /// Insert a new event (Expense) into the database.
+  /// Called by Event Discovery screen when user creates an event.
+  /// Converts Expense model to SQLite row via toMap(), gets auto-generated id.
+  /// Returns the id of the newly inserted row (used for RSVP/delete operations).
+  /// After insert, the event appears in discovery list and can be RSVP'd.
   Future<int> insertExpense(Expense expense) async {
     Database db = await this.database;
     var result = await db.insert(expenseTable, expense.toMap());
     return result;
   }
 
+  /// Retrieve all events (RSVP'd and not RSVP'd) from the database.
+  /// Called by Event Discovery screen to populate the browsable event list.
+  /// Ordered by date DESC so newest events appear first.
+  /// Filters out social missions (separate table for those).
+  /// Each row is converted back to Expense model via fromMap().
+  /// Returns empty list if no events exist.
   Future<List<Expense>> getExpenseList() async {
     Database db = await this.database;
     var result = await db.query(expenseTable, orderBy: '$colDate DESC');
@@ -124,6 +135,12 @@ class ExpenseDatabaseHelper {
     return expenseList;
   }
 
+  /// Retrieve only RSVP'd events (is_reserved = 1).
+  /// Called by Engagement Reports to calculate participation, streaks, and badges.
+  /// Also used by Team Collaboration to show which events are available for task assignment.
+  /// Ordered by date DESC for reverse chronological display.
+  /// These events are synced with mission completions when syncMissionsToEngagementReports is true.
+  /// Returns empty list if user has not RSVP'd to any events yet.
   Future<List<Expense>> getReservedExpenseList() async {
     Database db = await this.database;
     var result = await db.query(
@@ -135,6 +152,12 @@ class ExpenseDatabaseHelper {
     return result.map((item) => Expense.fromMap(item)).toList();
   }
 
+  /// Mark an event as RSVP'd (is_reserved = 1).
+  /// Called from Event Detail screen when user taps 'RSVP Now' or marks a mission complete.
+  /// Once reserved, event is included in engagement reports.
+  /// Updates the expense row by id, does NOT modify other fields.
+  /// Also triggers mission-to-expense linking if syncMissionsToEngagementReports is enabled.
+  /// Returns number of rows updated (typically 1).
   Future<int> markExpenseAsReserved(int id) async {
     Database db = await this.database;
     return await db.update(
@@ -155,6 +178,12 @@ class ExpenseDatabaseHelper {
     );
   }
 
+  /// Permanently remove an event from the database.
+  /// Called from Event Detail screen when user taps 'Remove Event'.
+  /// Deletes the row by id; the event no longer appears in discovery or reports.
+  /// If event was RSVP'd, it is removed from engagement analytics.
+  /// Use with caution: deletion bypasses soft-delete; row cannot be recovered.
+  /// Returns number of rows deleted (typically 1 if id was found, 0 otherwise).
   Future<int> deleteExpense(int id) async {
     Database db = await this.database;
     return await db.delete(expenseTable, where: '$colId = ?', whereArgs: [id]);
